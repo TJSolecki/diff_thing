@@ -18,7 +18,9 @@ defmodule DiffThingWeb.Router do
   scope "/", DiffThingWeb do
     pipe_through :browser
 
-    get "/", PageController, :home
+    get "/", PageController, :new
+    post "/", PageController, :create
+    get "/:id", PageController, :show
   end
 
   # Other scopes may use custom stacks.
