@@ -4,6 +4,7 @@ defmodule DiffThing.Diffs do
   """
 
   import Ecto.Query, warn: false
+  alias DiffThing.Utils
   alias DiffThing.Repo
 
   alias DiffThing.Diffs.Diff
@@ -50,8 +51,10 @@ defmodule DiffThing.Diffs do
 
   """
   def create_diff(attrs \\ %{}) do
+    id = Utils.generate_unique_id(Diff, Repo)
+
     %Diff{}
-    |> Diff.changeset(attrs)
+    |> Diff.changeset(attrs |> Map.put("id", id))
     |> Repo.insert()
   end
 
