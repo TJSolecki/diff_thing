@@ -35,3 +35,5 @@ diff_thing-*.tar
 npm-debug.log
 /assets/node_modules/
 
+# release build
+/rel
