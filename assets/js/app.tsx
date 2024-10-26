@@ -8,8 +8,6 @@ createIcons({ icons });
 
 axios.defaults.xsrfHeaderName = "x-csrf-token";
 
-window.document.title = "diff thing"
-
 createInertiaApp({
   resolve: async (name: string) => {
     return await import(`./pages/${name}.tsx`);
