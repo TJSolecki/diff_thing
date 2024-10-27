@@ -1,18 +1,15 @@
-# DiffThing
+# Diff Thing
 
-To start your Phoenix server:
+## Overview
 
-  * Run `mix setup` to install and setup dependencies
-  * Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
+Diff Thing is a simple diff sharing website which can be easily self hosted if privacy is a concern for your use case.
+Otherwise the site is available publicly add [diffthing.com](https://diffthing.com).
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+## Self hosting
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+The application is built with the pheonix web framework and there are several options for deployment. For something
+simple, see this [guide](https://bjornbr.is/deploying-elixir-and-phoenix/).
 
-## Learn more
+## Storing diffs
 
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+Each diff is persisted to a postgres database and assigned a unique url that you can share with others
