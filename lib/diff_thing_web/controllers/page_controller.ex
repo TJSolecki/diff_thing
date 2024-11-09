@@ -13,7 +13,7 @@ defmodule DiffThingWeb.PageController do
     case Diffs.create_diff(diff_params) do
       {:ok, diff} ->
         conn
-        |> redirect(to: ~p"/#{diff}")
+        |> redirect(to: ~p"/diff/#{diff}")
 
       {:error, %Ecto.Changeset{} = changeset} ->
         render(conn, :new, changeset: changeset)
