@@ -21,11 +21,17 @@ defmodule DiffThingWeb.PageController do
   end
 
   def show(conn, %{"id" => id}) do
-    diff = Diffs.get_diff!(id)
+    diff = Diffs.get_diff(id)
 
-    conn
-    |> assign_prop("oldValue", diff.old_value)
-    |> assign_prop("newValue", diff.new_value)
-    |> render_inertia("DiffView")
+    if diff == nil do
+      conn
+      |> put_status(404)
+      |> render(:not_found)
+    else
+      conn
+      |> assign_prop("oldValue", diff.old_value)
+      |> assign_prop("newValue", diff.new_value)
+      |> render_inertia("DiffView")
+    end
   end
 end

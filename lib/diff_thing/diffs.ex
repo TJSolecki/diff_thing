@@ -38,6 +38,8 @@ defmodule DiffThing.Diffs do
   """
   def get_diff!(id), do: Repo.get!(Diff, id)
 
+  def get_diff(id), do: Repo.get(Diff, id)
+
   @doc """
   Creates a diff.
 
