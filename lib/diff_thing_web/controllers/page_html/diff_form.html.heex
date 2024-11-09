@@ -3,8 +3,8 @@
     Oops, something went wrong! Please check the errors below.
   </.error>
   <div class="grid grid-cols-2 gap-4">
-    <.input field={f[:old_value]} rows="15" type="textarea" label="Original text" />
-    <.input field={f[:new_value]} rows="15" type="textarea" label="New text" />
+    <.input field={f[:old_value]} required rows="15" type="textarea" label="Original text" />
+    <.input field={f[:new_value]} required rows="15" type="textarea" label="New text" />
   </div>
   <div style="margin-top:1rem !important; margin-block: auto;" class="grid items-center">
     <.button class="mx-auto" action="submit">Find difference</.button>
